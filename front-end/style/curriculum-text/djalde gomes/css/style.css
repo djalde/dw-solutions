@@ -51,3 +51,9 @@ h2 a {
 h2 a:hover {
     color:darkblue;
 }
+
+#copyright {
+    font-weight:bold;
+    font-style: italic;
+    text-align: center;
+}
