@@ -1,7 +1,7 @@
 <?php
 //crescente
 for ($i = 0; $i < 10; $i++) {
-  if  ($i >-1){
+  if  ($i > 0){
       print("\n");}
   for ($j = 0; $j <10; $j++) {
   
