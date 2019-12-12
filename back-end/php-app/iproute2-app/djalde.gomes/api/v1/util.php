@@ -26,7 +26,7 @@ function top_encode($result)
 
 function encode_1($result) {
   $processos = [];
-  $regex="/(\w+)@.+\s+.+\s+RX: bytes  packets  errors  dropped overrun mcast\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+TX: bytes  packets  errors  dropped carrier collsns\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)/";
+  $regex="/:\s+(.+):\s+.+\s+.+\s+RX: bytes  packets  errors  dropped overrun mcast\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+TX: bytes  packets  errors  dropped carrier collsns\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)/";
   preg_match($regex,$result,$matches);
   $processos["name"]=$matches[1];
   $processos["stats"] = [];
@@ -47,5 +47,6 @@ function encode_1($result) {
     "mcast" => $matches[13],
   ];
   return $processos;
+  
   
 }
